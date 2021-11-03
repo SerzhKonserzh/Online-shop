@@ -5,6 +5,21 @@
         src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2")
         font-weight: #{$weight}
         font-style: #{$style}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext")
 @import fonts.sass
+@import header.sass
 
+$fontDefault: "Roboto"
+$minWidth: 320px
+$maxWidth: 1400px
+$maxWidthContainer: 1400
 
+*
+    margin:0
+    padding: 0
+    font-family: Roboto
+._container
+    max-width: $maxWidthContainer+px
+    margin: 0 auto
+    padding: 0px 20px
