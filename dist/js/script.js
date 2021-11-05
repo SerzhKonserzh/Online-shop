@@ -1,5 +1,7 @@
+//burger
 const iconMenu=document.querySelector('.icon-menu');
 const bodyMenu=document.querySelector('.menu__body');
+const pageMenu=document.querySelector('.menu-page__burger');
 if(iconMenu){
     iconMenu.addEventListener("click",function(e){
         iconMenu.classList.toggle('_active');
@@ -10,6 +12,14 @@ if(bodyMenu){
         bodyMenu.classList.toggle('_active');
     });
 }
+if(pageMenu){
+    pageMenu.addEventListener("click",function(e){
+        pageMenu.classList.toggle('_active');
+    });
+}
+//dynamic adaptive
+
+//
 function testWebP(callback) {
 
     var webP = new Image();

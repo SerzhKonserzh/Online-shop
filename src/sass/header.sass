@@ -88,7 +88,8 @@ a
                 @media(min-width: 639px)
                     display: none
             @media(max-width: $md2+px)
-                opacity: 0
+                //opacity: 0
+                display: none
                 position: fixed
                 height: 100%
                 width: 100%
@@ -109,7 +110,7 @@ a
                     z-index: 3
                     background-color: $mainc
                 &._active
-                    opacity: 1
+                    display: block
             @media(max-width: $md3+px)
                 &::before
                     height: 80px
