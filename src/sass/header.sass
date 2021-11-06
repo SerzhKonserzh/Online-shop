@@ -88,7 +88,7 @@ a
                 @media(min-width: 639px)
                     display: none
             @media(max-width: $md2+px)
-                //opacity: 0
+                opacity: 0
                 display: none
                 position: fixed
                 height: 100%
@@ -111,6 +111,7 @@ a
                     background-color: $mainc
                 &._active
                     display: block
+                    opacity: 0.95
             @media(max-width: $md3+px)
                 &::before
                     height: 80px

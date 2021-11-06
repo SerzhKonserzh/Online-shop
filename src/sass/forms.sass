@@ -1,0 +1,53 @@
+.btn
+    border: none
+    display: inline-flex
+    padding: 0px 25px
+    justify-content: center
+    align-items: center
+    transition: all 0.3s ease 0s
+    height: 39px
+    background-color: gray
+    font-size: 12px
+    line-height: 18px
+    font-weight: 900
+    text-transform: uppercase
+    color: #ffffff
+    @media(min-width: 992px)
+        &:hover
+            background-color: #f68038
+.input
+    border: none
+    border-radius: 0 !important
+    width: 100%
+    display: block
+    padding: 0px 20px
+.checkbox
+    position: relative
+    &__input
+        position: absolute
+        width: 0
+        height: 0
+        opacity: 0
+        visibility: hidden
+        &:checked + .checkbox__text::before
+            background: #fff url("../img/icons/page/down_arrow.png") center no-repeat
+    &__text
+        display: inline-flex
+        align-items: center
+        position: relative
+        font-size: 16px
+        color:#fff
+        letter-spacing: -0.3px
+        line-height: 1.25
+        cursor: pointer
+        &::before
+            content: ""
+            align-self: flex-start
+            margin: 0px 14px 0px 0px
+            flex: 0 0 20px
+            left: 0
+            top: 0
+            width: 20px
+            height: 18px
+            background: #fff
+            border: 1px solid #a7a9ac
