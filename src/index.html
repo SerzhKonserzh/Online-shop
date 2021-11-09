@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="swiper.min.css">
         <link rel="stylesheet" href="css/style.min.css">
         <title>Gulp</title>
     </head>
@@ -40,6 +41,7 @@
                         <div class="search-page__select">
                             <div class="search-page__title">
                                 <span>Везде</span>
+                                <span data-text="Выбрано: " class="search-page__quantity"></span>
                             </div>
                             <div class="search-page__categories categories-search">
                                 <div class="categories-search__row">
@@ -99,9 +101,48 @@
                         </div>
                         <button class="search-page__btn btn">Найти</button>
                     </form>
+                    <div class="page__slider mainslider">
+                        <div class="mainslider__body _swiper">
+                            <div class="mainslider__slide">
+                                <div class="mainslider__content content-mainslider">
+                                    <div class="content-mainslider__title">
+                                        <span>Мега</span>распродажа
+                                    </div>
+                                    <div class="content-mainslider__text">
+                                        Успей купить
+                                    </div>
+                                    <div class="content-mainslider__footer">
+                                        <div class="content-mainslider__price">от 10$</div>
+                                        <a href="" class="content-mainslider__button"><span>Подробнее</span></a>
+                                    </div>
+                                </div>
+                                <div class="mainslider__image _ibg">
+                                    <img src="img/temp_big.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="mainslider__slide">
+                                <div class="mainslider__content content-mainslider">
+                                    <div class="content-mainslider__title">
+                                        <span>Мега</span>распродажа
+                                    </div>
+                                    <div class="content-mainslider__text">
+                                        Успей купить
+                                    </div>
+                                    <div class="content-mainslider__footer">
+                                        <div class="content-mainslider__price">от 10$</div>
+                                        <a href="" class="content-mainslider__button"><span>Подробнее</span></a>
+                                    </div>
+                                </div>
+                                <div class="mainslider__image _ibg">
+                                    <img src="img/temp_big.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainslider__dotts"></div>
+                    </div>
                 </div>
             </div>
         </main>
-        <script src="js/script.min.js"></script>
+        <script src="js/app.min.js"></script>
     </body>
 </html>

@@ -1,0 +1,10 @@
+ol.counter 
+    list-style-type: none
+    counter-reset: item
+    li
+        position: relative
+        padding: 0px 0px 0px 45px
+        &::before
+            counter-increment: item
+            content: counter(item)
+            position: absolute
