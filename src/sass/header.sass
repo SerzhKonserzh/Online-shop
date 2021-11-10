@@ -205,6 +205,8 @@ a
         display: flex
         align-items: center
         justify-content: space-between
+        @media(max-width: 640px)
+            height: 0
     &__column
         flex: 0 1 calc(50% - 95px)
     &__actions
@@ -289,7 +291,7 @@ a
             transition: all 0.3s ease 0s
             @media(max-width: 639px)
                 position: absolute
-                bottom: 50px
+                bottom: 20px
                 right: 50px
                 z-index: 5
             @media(max-width: 374px)

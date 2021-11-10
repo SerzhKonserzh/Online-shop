@@ -35,23 +35,32 @@ $md4: 479.98
 
 .page
     flex: 1 1 auto
+    @media(max-width: 640px)
+        padding: 20px 0px 0px 0px
     &__container
-        display: flex
+        @media(min-width: $md2+px)
+            display: flex
     &__side
         position: relative
         z-index: 3
         flex: 0 0 260px
+        @media(max-width: $md2+px)
+            margin: 0px 0px 30px 0px
     &__menu
+        margin: 0px 0px 44px 0px
     &__content
-        flex: 1 1 auto
-        min-width: 0
-        padding: 0px 0px 0px 30px
+        @media(min-width: $md2+px)
+            flex: 1 1 auto
+            min-width: 0
+            padding: 0px 0px 0px 30px
     &__search
         position: relative
-        z-index: 2
+        z-index: 5
         margin: 0px 0px 22px 0px
     &__slider
         margin: 0px 0px 66px 0px
+    &__side-news
+        margin: 0px 0px 75px 0px
 .menu-page
     background: linear-gradient(90deg, #fd6502, #a03700)
     border-radius: 5px
@@ -60,6 +69,7 @@ $md4: 479.98
         display: flex
         align-items: center
     &__title
+        flex: 1 1 auto
         font-family: 'UniSans'
         font-size: 30px
         line-height: 1.2
@@ -139,6 +149,8 @@ $md4: 479.98
         font-weight: 300
         span
             margin: 0px 13px
+            @media(max-width: $md3+px)
+                display: none
             &:last-child
                 display: none
         &::before
@@ -152,11 +164,15 @@ $md4: 479.98
             width: 10px
             height: 10px
             background: url("../img/icons/page/down_arrow.png") 0 0 no-repeat
+            @media(max-width: $md3+px)
+                display: none
         &._categories
             span
                 display: none
                 &:last-child
                     display: block
+                    @media(max-width: $md3+px)
+                        display: none
         &._active
             &::after
                 transform: rotate(-180deg)
@@ -188,13 +204,21 @@ $md4: 479.98
         width: 100%
         left: 0
     &__row
-        display: flex
+        @media(min-width: $md3+px)
+            display: flex
+        @media(max-width: $md3+px)
+            padding: 20px 0px
     &__column
         flex: 0 1 33.333%
         padding: 27px 40px
         border-right: 1px solid #f3f3f3
         &:last-child
             border: 0
+        @media(max-width: $md3+px)
+            padding: 0px 20px
+            margin: 0px 0px 20px 0px
+            &:last-child
+                margin: 0px
     &__list
         li
             margin: 0px 0px 20px 0px
@@ -208,3 +232,102 @@ $md4: 479.98
             color: #999
             &::before
                 display: none
+.side-title
+    font-family: 'UniSans'
+    font-size: 30px
+    font-weight: 900
+    text-transform: uppercase
+    letter-spacing: 0.75px
+    transition: all 0.3s ease 0s
+    color: #dadada
+    @media (min-width: $md2+px)
+        &:hover
+            color: #fd6502
+.news-side
+    &__title
+        display: inline-block
+        margin: 0px 0px 20px/30px * 1em 0px
+    &__items
+    &__item
+        margin: 0px 0px 45px 0px
+        &:last-child
+            margin: 0px 0px 0px 0px
+    &__label
+        font-size: 12px
+        line-height: 18px
+        font-weight: 900
+        text-transform: uppercase
+        margin: 0px 0px 20px/12px * 1em 0px
+        display: inline-block
+        color: #333333
+        @media (min-width: $md2+px)
+            &:hover
+                color: #fd6502
+    &__body
+        display: flex
+    &__date
+        flex: 0 0 30px
+        text-align: center     
+        color: #d8d8d8       
+        font-size: 18px
+        font-weight: 300
+        span        
+            font-size: 24px
+            font-weight: 900
+            display: block
+    &__text
+        font-size: 12px
+        line-height: 18px
+        font-weight: 300
+        color: #666666
+        padding: 0px 0px 0px 15px
+.reviews-side
+    &__title
+        display: inline-block
+        margin: 0px 0px 20px/30px * 1em 0px
+    &__items
+    &__item
+        display: block
+        margin: 0px 0px 45px 0px
+        &:last-child
+            margin: 0px 0px 0px 0px
+        @media (min-width: $md2+px)
+            &:hover
+                .reviews-side__user,.reviews-side__date
+                    color: #f68038
+                .reviews-side__body
+                    background-color: #f68038 
+                    color: #fff
+    &__header
+        display: flex
+        justify-content: space-between
+        margin: 0px 0px 10px 0px
+    &__user
+        font-size: 12px
+        font-weight: 900
+        text-transform: uppercase
+        color: #333333
+        @media (min-width: $md2+px)
+            &:hover
+                color: #f68038
+    &__date
+        font-size: 12px
+        font-weight: 300
+        text-transform: uppercase
+        color: #999999
+    &__body
+        padding: 14px 8px 14px 30px
+        position: relative
+        &::before
+            color: #dadada
+            font-size: 48px
+            font-weight: 900
+            content: '"'
+            position: absolute
+            left: 8px
+            top: 12px
+            line-height: 1
+        font-size: 12px
+        line-height: 18px
+        font-weight: 300
+        color: #666666
