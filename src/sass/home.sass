@@ -95,3 +95,43 @@
             padding: 0px 30px 0px 0px
             background: url("../img/icons/page/btn_arrow.png") right center no-repeat
             color: #ffffff
+.products-slider
+    overflow: hidden
+    &__header
+        display: flex
+    &__title
+        flex: 1 1 auto
+        font-family: 'UniSans'
+        font-size: 36px
+        font-weight: 900
+        text-transform: uppercase
+        letter-spacing: 0.75px
+        color: #dadada
+    &__control
+        display: flex
+        align-items: center
+    &__arrow
+        background: url("../img/icons/page/sl_arrow_h.png") 0 0 no-repeat
+        filter: grayscale(100%)
+        cursor: pointer
+        min-width: 34px
+        height: 29px
+        @media (min-width: $md2+px)
+            &:hover
+                filter: none
+        &_prev
+        &_next
+            transform: rotate(-180deg)
+    &__info
+        padding: 0px 20px
+        font-size: 14px
+        font-weight: 500
+        color: #999999
+        .swiper-pagination-current
+            font-size: 30px
+            font-weight: 900
+            text-transform: uppercase
+            letter-spacing: 0.025em
+            color: #333333
+        .swiper-pagination-total
+    &__items
