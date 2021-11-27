@@ -98,7 +98,8 @@
 .products-slider
     overflow: hidden
     &__header
-        display: flex
+        @media (min-width: $md3+px)
+            display: flex
     &__title
         flex: 1 1 auto
         font-family: 'UniSans'
@@ -107,6 +108,9 @@
         text-transform: uppercase
         letter-spacing: 0.75px
         color: #dadada
+        @media (max-width: $md3+px)
+            margin: 0px 0px 15px 0px
+            text-align: center
     &__control
         display: flex
         align-items: center
@@ -134,4 +138,64 @@
             letter-spacing: 0.025em
             color: #333333
         .swiper-pagination-total
+        @media (max-width: $md3+px)
+            text-align: center    
     &__items
+.descr
+    border: 3px dashed #dadada
+    border-left: none
+    border-right: none
+    padding: 32px 0px
+    &__container
+        background: linear-gradient(135deg, #fd6502, #a03700)
+    &__wrapper
+        padding: 45px 40px 60px 40px
+    &__title
+        font-family: 'UniSans'
+        font-size: 30px
+        line-height: 1.2
+        font-weight: 900
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: #fff
+        margin: 0px 0px 33px 0px
+    &__body
+        display: flex
+        justify-content: space-between
+        font-size: 14px
+        line-height: 20px
+        font-weight: 400
+        letter-spacing: 0.025em
+        color: #fff
+.body-descr
+    &__text
+        padding: 0px 30px 0px 0px
+    &__list
+        padding: 0px 0px 0px 30px
+.list-descr
+    &__title
+        font-size: 16px
+        line-height: 20px
+        font-weight: 900
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        margin: 0px 0px 5px 0px
+        color: #ffffff
+    &__content
+        text-indent: 30px
+        li
+            position: relative
+            padding: 0px 0px 5px 0px
+            &:last-child
+                padding: 0px
+            &::before
+                display: inline-block
+                position: absolute
+                top: 0px
+                left: 8px
+                content: ""
+                transition: all 0.3s ease 0s
+                width: 16px
+                height: 16px
+                background: url("../img/icons/page/list_arrow.png") 0 0 no-repeat 
+            

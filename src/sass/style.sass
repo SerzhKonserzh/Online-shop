@@ -29,6 +29,7 @@ $md4: 479.98
     padding: 0
     font-family: Roboto
     box-sizing: border-box
+    
 ._container
     max-width: $maxWidthContainer+px
     margin: 0 auto
@@ -39,6 +40,7 @@ $md4: 479.98
     @media(max-width: 640px)
         padding: 20px 0px 0px 0px
     &__container
+        margin-bottom: 50px
         @media(min-width: $md2+px)
             display: flex
     &__side
@@ -145,6 +147,12 @@ $md4: 479.98
         flex: 0 1 33%
         padding: 0px 15px
         margin: 30px 0px 0px 0px
+        @media (max-width: $md1+px) and (min-width: $md2+px)
+            flex: 0 1 50%
+        @media (max-width: 840px)
+            flex: 0 1 50%
+        @media (max-width: 600px)
+            flex: 1 1 100%
 .item-product
     position: relative
     padding: 42px 15px 15px 23px
@@ -204,7 +212,7 @@ $md4: 479.98
         top: 0
         left: 0
         transition: transform 0.3s ease 0s
-        transform: translate(-100%, 0px) 
+        transform: translate(-110%, 0px) 
     @media (min-width: $md2+px)
         &:hover
             .item-product__hover
